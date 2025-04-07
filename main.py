@@ -1,3 +1,6 @@
+from visualize import
+plot_histograms,plot_boxplots,
+plot_correlation_heatmap
 # main.py
 """
 Open Data Scince(ODS) Project 
@@ -28,6 +31,12 @@ def load_data(path):
     path="data/sanple.csv"
     if data is not None:
       basic_eda(data)
-      if__name__=="__main__":
-      main
+      if __name__=="__main__":
+       df=load_dataset()
+       if df is not None:
+        basic_eda(df)
+        plot_histograms(df)
+        plot_boxplots(df)
+        plot_correlation_heatmap(df)
+        main
     data=load_data(path)
